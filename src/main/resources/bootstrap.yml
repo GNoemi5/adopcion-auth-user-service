@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: auth-microservice
+  cloud:
+    config:
+      profile: dev
+      enabled: true
+      uri: http://localhost:8888
+
+server:
+  port: 0
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
+
+jwt:
+  secret: secret
